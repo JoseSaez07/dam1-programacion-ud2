@@ -21,8 +21,10 @@ public class DatosUsuario {
             usuario.mostrarInformacion();
         }else{
             System.out.println("No se puede crear por que el usuario no es valido");
+            
         }
         sc.close();
     }
 }
+
 
