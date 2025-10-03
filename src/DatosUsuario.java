@@ -9,22 +9,19 @@ public class DatosUsuario {
         System.out.print("Introduce el Nombre: ");
         String nombre = sc.nextLine();
 
-        System.out.print("Introduce el Apellido: ");
-        int apellido = sc.nextInt();    sc.nextLine();
+        System.out.print("Introduce tu edad: ");
+        int edad = sc.nextInt();
 
         System.out.print("Introduce tu correo electronico: ");
         String email = sc.nextLine();
 
-        boolean emailValido = ProcesadorTexto.esEmailValido(email); 
-        if(emailValido){
-            Usuario usuario = new Usuario(nombre, apellido, email); 
+        if (ProcesadorTexto.esEmailValido(email)) {
+            Usuario usuario = new Usuario(nombre, edad, email);
             usuario.mostrarInformacion();
-        }else{
+        } else {
             System.out.println("No se puede crear por que el usuario no es valido");
-            
+
         }
         sc.close();
     }
 }
-
-
