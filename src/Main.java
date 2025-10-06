@@ -46,25 +46,22 @@ public class Main {
   // ================================
  // 1. Intenta llamar al método registrarOperacion("Hackeo", 9999).
 // 2. Observa el error de compilación. 
-
-    
-
+cuenta registrarOperacion("Hackeo", 9999);
 }
 }
 // ================================
 // RESPUESTAS DE REFLEXIÓN
 // ================================
 // Ejercicio 1: ¿por qué no puedo acceder al saldo directamente? 
-// Respuesta: Tiene por ejmplo que no puedes acceder directamente, solo acceso a través  de métodos públicos de la clase. 
+// Respuesta: Porque es private, solo se puede acceder mediante métodos públicos.
 
-// Ejercicio 2: ¿por qué sí puedo usar los métodos depositar(), retirar() y getSaldo()?
-// Respuesta: 
+// Ejercicio 2: ¿por qué sí puedo usar los métodos depositar(), retirar() y getSaldo()? 
+// Respuesta: Porque son públicos y permiten modificar o consultar el saldo de forma segura.
 
-// Ejercicio 3: ¿qué significa el error al intentar llamar a registrarOperacion()?
-// Respuesta: ....................................................
+// Ejercicio 3: ¿qué significa el error al intentar llamar a registrarOperacion()? 
+// Respuesta: Que es un método private y no se puede usar desde fuera de la clase.
 
 // Ejercicio 4: 
-// - ¿Qué ventajas tiene que saldo sea private?  QUE NO SE 
-// - ¿Qué pasaría si saldo fuera public?
-// - ¿Por qué registrarOperacion es private en lugar de public?
-// Respuesta: ....................................................
+// - ¿Qué ventajas tiene que saldo sea private?  Protege los datos y evita errores.
+// - ¿Qué pasaría si saldo fuera public?  Se podría modificar sin control, causando fallos.
+// - ¿Por qué registrarOperacion es private en lugar de public?  Porque es interno y no debe usarse desde fuera.
