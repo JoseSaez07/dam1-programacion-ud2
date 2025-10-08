@@ -1,4 +1,7 @@
 package utilidades;
+
+import utilidades.DemoMetodos;
+
 public class TrabajandoConMetodos {
 public class TrabajandoConMetodos {
     public static void main(String[] args) {
@@ -21,6 +24,13 @@ public class TrabajandoConMetodos {
         System.out.print( method.sumar);
          System.out.print( "Lucia");
         
+        // ================================
+        // EJERCICIO 3: Paso por valor (primitivos)
+        // ================================
+        // 1. Declara una variable int n = 10.
+        // 2. Llama a method.incrementar(n).
+        // 3. Imprime n después de llamar al método.
+        // Tu código aquí ↓
    
         }
 
