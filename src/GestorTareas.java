@@ -96,7 +96,7 @@ public class GestorTareas {
     }
 
     // EJERCICIO 3: Conversión de tiempo
-    public static int conversion(int horas, int minutos) {
+    public static int conversion(int tiempo) {
         System.out.println();
 
     }
