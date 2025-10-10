@@ -30,7 +30,8 @@ public class GestorTareas {
         // No tiene que devolver nada.
 
         // Tu código aquí ↓
-      int horas = 
+      int horas = minutos / 60;
+    int minutosSobrantes = minutos % 60;
         // ================================
         // EJERCICIO 4: Recordatorios
         // ================================
@@ -96,9 +97,13 @@ public class GestorTareas {
     }
 
     // EJERCICIO 3: Conversión de tiempo
-    public static int conversion(int tiempo) {
-        System.out.println();
-
+       public static void tiempo(int minutos) {
+    int horas = minutos / 60;
+    int minutosSobrantes = minutos % 60;
+    System.out.println("Son " + horas + " hora y " + minutosSobrantes + " minutos");
     }
-
+   
 }
+
+    
+
