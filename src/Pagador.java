@@ -40,16 +40,15 @@ public class Pagador {
 // ================================
 // Pregunta 1: ¿Qué información mínima (parámetros) se necesita para realizar un
 // pago?
-// Respuesta: ....................................................
 
 // Pregunta 2: ¿En qué se diferencia el pago con tarjeta respecto al pago en
 // efectivo?
-// Respuesta: ....................................................
+// Respuesta: Tarjeta necesita verificación; efectivo no.
 
 // Pregunta 3: ¿Por qué es útil que todos se llamen "pagar"?
-// Respuesta: ....................................................
+// Respuesta: Para usar un mismo nombre para todos los pagos.
 
 // Pregunta 4: ¿Qué pasaría si en lugar de pagar() hubiera métodos llamados
 // pagarEfectivo(), pagarTarjeta(), pagarBizum()?
 // ¿Qué ventaja aporta la sobrecarga de métodos?
-// Respuesta: ....................................................
+// Respuesta: Evita muchos métodos distintos; simplifica el código.

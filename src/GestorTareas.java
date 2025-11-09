@@ -52,6 +52,8 @@ public class GestorTareas {
         // Muestra el resultado de llamar al método con ambos casos.
 
         // Tu código aquí ↓
+        System.out.println(valor(true));
+        System.out.println(valor(false));
 
         // ================================
         // EJERCICIO 6: Productividad
@@ -59,6 +61,7 @@ public class GestorTareas {
         // Crea un método que reciba el número total de tareas y las completadas
         // y devuelva el porcentaje de avance (por ejemplo, 70.0 si 7/10).
         // Muestra el resultado en consola.
+        porcentaje(10, 7);
 
         // Tu código aquí ↓
 
@@ -73,6 +76,8 @@ public class GestorTareas {
         // Llama a ambos desde main.
 
         // Tu código aquí ↓
+        System.out.println(saludo());
+        System.out.println(saludo("Jose", 1));
 
         // ================================
         // EJERCICIO 8: Bonus - Planificación
@@ -99,6 +104,7 @@ public class GestorTareas {
     // EJERCICIO 2: Duración total
     // ================================
     public static int duracion(int a, int b) {
+        System.out.println("Ejercicio 2");
         return (a + b);
     }
 
@@ -106,6 +112,7 @@ public class GestorTareas {
     // EJERCICIO 3: Conversión de tiempo
     // ================================
     public static void horas(int minutos) {
+        System.out.println("Ejercicio 3");
         int horas = (minutos / 60);
         int minutosRestantes = (minutos % 60);
         System.out.println("Son " + horas + " horas y " + minutosRestantes + " minutos.");
@@ -113,13 +120,48 @@ public class GestorTareas {
 
     // ================================
     // EJERCICIO 4: Recordatorios
-    // ================================
-    // Crea un método que reciba el nombre de una tarea y una prioridad (1–3)
-    // y muestre un mensaje como:
-    // "📌 [Prioridad 2] Revisar correo".
-    // Solo muestra el mensaje, no devuelve nada.
+    // ================================-
+
     public static void prioridad(String tarea, int prioridad) {
+        System.out.println("Ejercicio 4");
         System.out.println("📌 [Prioridad " + prioridad + "] " + tarea);
+    }
+
+    // ================================
+    // EJERCICIO 5: Estado de tareas
+    // ================================
+    // Crea un método que reciba un valor booleano que indique si la tarea está
+    // completada.
+    // Debe devolver un texto: "✅ Completada" o "⏳ Pendiente".
+    // Muestra el resultado de llamar al método con ambos casos.
+    public static String valor(boolean completada) {
+        System.out.println("Ejercicio 5");
+        if (completada) {
+            return "✅ Completada";
+        } else {
+            return "⏳ Pendiente";
+
+        }
+    }
+
+    // ================================
+    // EJERCICIO 6: Productividad
+    // ================================
+    public static void porcentaje(int tareas, int completada) {
+        System.out.println("Ejercicio 6");
+        double porcentaje = ((double) completada / tareas) * 100;
+        System.out.println("Has completado el " + porcentaje + "% de tus tareas.");
+    }
+
+    // ================================
+    // EJERCICIO 7: Sobrecarga
+    // ================================
+    public static String saludo() {
+        return "Hola crack";
+    }
+
+    public static String saludo(String nombre, int numero) {
+        return "Hola " + nombre + ", te quedan " + numero + " tareas pendientes.";
     }
 
 }

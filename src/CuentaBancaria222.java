@@ -1,7 +1,8 @@
+import utilidades.CuentaBancaria;
 
 public class CuentaBancaria222 {
     public static void main(String[] args) {
-        CuentaBancaria222 cuenta = new CuentaBancaria222();
+        CuentaBancaria cuenta = new CuentaBancaria();
 
         // ================================
         // EJERCICIO 1: Uso de atributos
@@ -11,7 +12,7 @@ public class CuentaBancaria222 {
         // 2. Observa el error de compilación.
 
         // Tu código aquí ↓
-        System.out.println(cuenta);
+        // System.out.println(cuenta.saldo); esto da error por que saldo es privado
 
         // ================================
         // EJERCICIO 2: Métodos públicos
@@ -21,6 +22,10 @@ public class CuentaBancaria222 {
         // 3. Imprime el saldo con getSaldo().
 
         // Tu código aquí ↓
+        cuenta.depositar(100);
+        cuenta.retirar(30);
+        System.out.println("Saldo actual:" + cuenta.getSaldo() + "$");
+        // Por que no me deja llamarlo si es un public
 
         // ================================
         // EJERCICIO 3: Métodos privados
@@ -29,6 +34,7 @@ public class CuentaBancaria222 {
         // 2. Observa el error de compilación.
 
         // Tu código aquí ↓
+        // cuenta.registrarOperacion("Hackeo", 9999); // Esto da error porque es private
 
         // ================================
         // EJERCICIO 4: Libre
@@ -43,17 +49,19 @@ public class CuentaBancaria222 {
 // ================================
 // Ejercicio 1: ¿por qué no puedo acceder al saldo directamente?
 // Respuesta: ....................................................
-
+// Porque saldo es private y solo se puede usar dentro de la clase.
 // Ejercicio 2: ¿por qué sí puedo usar los métodos depositar(), retirar() y
 // getSaldo()?
-// Respuesta: ....................................................
+// Respuesta: Porque son public y se pueden usar desde otras clases de forma
+// segura.
 
 // Ejercicio 3: ¿qué significa el error al intentar llamar a
 // registrarOperacion()?
-// Respuesta: ....................................................
+// Respuesta: Que el método es private y solo puede usarse dentro de la clase.
 
 // Ejercicio 4:
-// - ¿Qué ventajas tiene que saldo sea private?
-// - ¿Qué pasaría si saldo fuera public?
-// - ¿Por qué registrarOperacion es private en lugar de public?
-// Respuesta: ....................................................
+// - Ventajas de que saldo sea private: Protege los datos de cambios indebidos.
+// - Qué pasaría si fuera public: Cualquiera podría modificarlo y causar
+// errores.
+// - Por qué registrarOperacion es private: Es interno, no debe usarse desde
+// fuera.
