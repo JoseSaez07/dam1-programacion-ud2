@@ -1,4 +1,3 @@
-import utilidades.CuentaBancaria;
 
 public class CuentaBancaria222 {
     public static void main(String[] args) {

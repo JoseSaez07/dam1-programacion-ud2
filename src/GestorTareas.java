@@ -1,5 +1,5 @@
-
 public class GestorTareas {
+
     public static void main(String[] args) {
 
         // ================================
@@ -7,20 +7,20 @@ public class GestorTareas {
         // ================================
         // Crea un método llamado que muestre un mensaje de bienvenida al programa.
         // No necesita devolver nada, solo imprimir por consola.
-
+        bienvenida("Jose");
+        bienvenida("Ana");
         // Tu código aquí ↓
-        bienvenida( "Iris");
-        bienvenida( "Nico");
+
         // ================================
         // EJERCICIO 2: Duración total
         // ================================
         // Crea un método que reciba la duración (en minutos) de dos tareas
         // y devuelva el total de minutos.
         // Llama al método con 45 y 30 y muestra el resultado en consola.
-      
         // Tu código aquí ↓
-        int total = duracion(45, 30);
-        System.out.println(total);
+        int resultado = duracion(45, 30);
+        System.out.println("El total de minutos es " + resultado);
+
         // ================================
         // EJERCICIO 3: Conversión de tiempo
         // ================================
@@ -28,10 +28,10 @@ public class GestorTareas {
         // y muestre en pantalla cuántas horas y minutos son.
         // Ejemplo: 150 minutos → "Son 2 horas y 30 minutos".
         // No tiene que devolver nada.
+        horas(150);
 
         // Tu código aquí ↓
-      int horas = minutos / 60;
-    int minutosSobrantes = minutos % 60;
+
         // ================================
         // EJERCICIO 4: Recordatorios
         // ================================
@@ -39,6 +39,7 @@ public class GestorTareas {
         // y muestre un mensaje como:
         // "📌 [Prioridad 2] Revisar correo".
         // Solo muestra el mensaje, no devuelve nada.
+        prioridad("Mirar el correo", 1);
 
         // Tu código aquí ↓
 
@@ -82,28 +83,43 @@ public class GestorTareas {
         // Muestra el texto en pantalla.
 
         // Tu código aquí ↓
+
     }
 
     // Aquí debéis crear los métodos fuera del main ↓↓↓
+    // ================================
     // EJERCICIO 1: Bienvenida
+    // ================================
     public static void bienvenida(String nombre) {
-        System.out.println("Bienvenido al programa " + nombre);
+        System.out.println("Ejercicio 1 ");
+        System.out.println("Bienvenido " + nombre);
     }
-    // EJERCICIO 2: Duración total
 
+    // ================================
+    // EJERCICIO 2: Duración total
+    // ================================
     public static int duracion(int a, int b) {
         return (a + b);
-
     }
 
+    // ================================
     // EJERCICIO 3: Conversión de tiempo
-       public static void tiempo(int minutos) {
-    int horas = minutos / 60;
-    int minutosSobrantes = minutos % 60;
-    System.out.println("Son " + horas + " hora y " + minutosSobrantes + " minutos");
+    // ================================
+    public static void horas(int minutos) {
+        int horas = (minutos / 60);
+        int minutosRestantes = (minutos % 60);
+        System.out.println("Son " + horas + " horas y " + minutosRestantes + " minutos.");
     }
-   
+
+    // ================================
+    // EJERCICIO 4: Recordatorios
+    // ================================
+    // Crea un método que reciba el nombre de una tarea y una prioridad (1–3)
+    // y muestre un mensaje como:
+    // "📌 [Prioridad 2] Revisar correo".
+    // Solo muestra el mensaje, no devuelve nada.
+    public static void prioridad(String tarea, int prioridad) {
+        System.out.println("📌 [Prioridad " + prioridad + "] " + tarea);
+    }
+
 }
-
-    
-
