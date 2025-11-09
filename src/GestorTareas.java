@@ -39,7 +39,7 @@ public class GestorTareas {
         // y muestre un mensaje como:
         // "📌 [Prioridad 2] Revisar correo".
         // Solo muestra el mensaje, no devuelve nada.
-        prioridad("Mirar el correo", 1);
+        prioridad("Mirar el correo", 2);
 
         // Tu código aquí ↓
 
@@ -124,7 +124,7 @@ public class GestorTareas {
 
     public static void prioridad(String tarea, int prioridad) {
         System.out.println("Ejercicio 4");
-        System.out.println("📌 [Prioridad " + prioridad + "] " + tarea);
+        System.out.println(" [Prioridad " + prioridad + "] " + tarea);
     }
 
     // ================================
